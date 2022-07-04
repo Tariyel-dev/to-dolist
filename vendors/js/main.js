@@ -51,10 +51,12 @@ btn.onclick = function () {
           })
 
     } else {
-        todoList.innerHTML += `<li>${inputtext.value}</li>`
-        listData.push(inputtext.value)
+      let evaldata = eval(inputtext.value)
+        todoList.innerHTML += `<li>${evaldata}</li>`
+        listData.push(evaldata)
         localStorage.setItem("todolist", JSON.stringify(listData))
         inputtext.value = ""
+
 
     }
 
